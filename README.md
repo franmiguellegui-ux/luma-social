@@ -83,3 +83,9 @@ proyecto-final/
 El código fuente del proyecto se encuentra disponible en GitHub:
 
 [Ver repositorio](https://github.com/franmiguellegui-ux/luma-social)
+
+## Visualización del proyecto
+
+Podés visitar el sitio publicado en el siguiente enlace:
+
+[Ver sitio web](https://luma-social-sepia.vercel.app/)
