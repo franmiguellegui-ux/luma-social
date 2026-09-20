@@ -1,0 +1,52 @@
+/* NAVBAR */
+
+@use "variables";
+
+.navbar {
+    padding: variables.$espaciado-medio variables.$espaciado-grande;
+    background-color: variables.$color-blanco !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: variables.$color-negro !important;
+}
+
+.navbar-nav {
+    gap: variables.$espaciado-medio;
+}
+
+.nav-link {
+    color: variables.$color-negro !important;
+    transition: 0.3s ease;
+
+    &:hover {
+        color: variables.$color-lavanda-oscuro !important;
+    }
+}
+
+.navbar-toggler {
+    border: 1px solid variables.$color-lavanda;
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(
+            variables.$color-lavanda,
+            0.25
+        );
+    }
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: variables.$espaciado-medio;
+    }
+
+    .navbar-nav {
+        align-items: flex-start;
+        gap: variables.$espaciado-pequeno;
+    }
+}

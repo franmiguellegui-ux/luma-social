@@ -1,0 +1,8 @@
+/* HEADER */
+
+@use "variables";
+
+header {
+    background-color: variables.$color-blanco;
+    border-bottom: 1px solid variables.$color-gris-claro;
+}

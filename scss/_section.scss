@@ -1,0 +1,325 @@
+/* SECCIONES */
+
+@use "variables";
+@use "mixins";
+
+/* SECCIONES GENERALES */
+
+section {
+    width: 100%;
+    padding: variables.$espaciado-extra variables.$espaciado-grande;
+
+    @media (max-width: 991px) {
+        padding: 3rem variables.$espaciado-grande;
+    }
+
+    @media (max-width: 576px) {
+        padding: variables.$espaciado-grande variables.$espaciado-medio;
+    }
+}
+
+.section-heading {
+    margin-bottom: variables.$espaciado-grande;
+    text-align: center;
+
+    h2 {
+        margin-bottom: variables.$espaciado-medio;
+        color: variables.$color-negro;
+    }
+
+    p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: variables.$color-gris;
+    }
+
+    @media (max-width: 576px) {
+        margin-bottom: variables.$espaciado-medio;
+    }
+}
+
+/* SECCIONES DE PÁGINAS */
+
+.pagina-introduccion {
+    text-align: center;
+    background-color: variables.$color-gris-claro;
+
+    p {
+        max-width: 700px;
+        margin: variables.$espaciado-medio auto 0;
+        color: variables.$color-gris;
+    }
+}
+
+/* CTA */
+
+.cta {
+    text-align: center;
+    background-color: variables.$color-lavanda;
+
+    h2 {
+        margin-bottom: variables.$espaciado-medio;
+    }
+
+    p {
+        max-width: 650px;
+        margin: 0 auto variables.$espaciado-grande;
+    }
+}
+
+/* BOTONES */
+
+.btn-principal {
+    @include mixins.boton(
+        variables.$color-lavanda,
+        variables.$color-negro
+    );
+
+    font-weight: bold;
+
+    &:hover {
+        background-color: variables.$color-lavanda-oscuro;
+        color: variables.$color-blanco;
+    }
+}
+
+.btn-secundario {
+    @extend .btn-principal;
+
+    background-color: variables.$color-blanco;
+    color: variables.$color-negro;
+    border: 1px solid variables.$color-lavanda;
+
+    &:hover {
+        background-color: variables.$color-lavanda;
+        color: variables.$color-negro;
+    }
+}
+
+/* HERO */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: variables.$espaciado-extra;
+    align-items: center;
+
+    &__contenido {
+        h1 {
+            margin-bottom: variables.$espaciado-medio;
+        }
+
+        p {
+            max-width: 550px;
+            margin-bottom: variables.$espaciado-grande;
+            color: variables.$color-gris;
+        }
+    }
+
+    &__imagen {
+        img {
+            width: 100%;
+            border-radius: variables.$radio-grande;
+        }
+    }
+
+    @media (max-width: 991px) {
+        gap: variables.$espaciado-grande;
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+
+        &__contenido {
+            p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+/* SOBRE NOSOTROS */
+
+.sobre-nosotros-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: variables.$espaciado-extra;
+    align-items: center;
+
+    &__contenido {
+        p {
+            max-width: 600px;
+            margin-top: variables.$espaciado-medio;
+            color: variables.$color-gris;
+        }
+    }
+
+    &__imagen {
+        img {
+            width: 100%;
+            border-radius: variables.$radio-grande;
+        }
+    }
+
+    @media (max-width: 991px) {
+        gap: variables.$espaciado-grande;
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+
+        &__contenido {
+            text-align: center;
+
+            p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+/* PROCESO */
+
+.proceso-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: variables.$espaciado-grande;
+    margin-top: variables.$espaciado-grande;
+
+    article {
+        padding: variables.$espaciado-grande;
+        background-color: variables.$color-gris-claro;
+        border-radius: variables.$radio-medio;
+
+        h3 {
+            margin-bottom: variables.$espaciado-medio;
+        }
+
+        p {
+            color: variables.$color-gris;
+        }
+    }
+
+    @media (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* VALORES */
+
+.valores-lista {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: variables.$espaciado-medio;
+    margin-top: variables.$espaciado-grande;
+
+    li {
+        padding: variables.$espaciado-medio;
+        background-color: variables.$color-gris-claro;
+        border-radius: variables.$radio-pequeno;
+        text-align: center;
+    }
+
+    @media (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FORMULARIO */
+
+.formulario-contacto {
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: variables.$espaciado-medio;
+
+    .formulario-campo {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$espaciado-pequeno;
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: variables.$espaciado-medio;
+            border: 1px solid variables.$color-gris;
+            border-radius: variables.$radio-pequeno;
+            font-family: variables.$fuente-principal;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    }
+
+    .btn-principal {
+        align-self: flex-start;
+        border: none;
+        cursor: pointer;
+    }
+
+    @media (max-width: 576px) {
+        .btn-principal {
+            align-self: stretch;
+            text-align: center;
+        }
+    }
+}
+
+/* CONTACTO */
+
+.contacto-redes {
+    text-align: center;
+
+    &__enlaces {
+        display: flex;
+        justify-content: center;
+        gap: variables.$espaciado-grande;
+        margin-top: variables.$espaciado-grande;
+
+        a {
+            color: variables.$color-negro;
+            font-weight: bold;
+            transition: 0.3s ease;
+
+            &:hover {
+                color: variables.$color-lavanda-oscuro;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        &__enlaces {
+            flex-direction: column;
+            gap: variables.$espaciado-medio;
+        }
+    }
+}
+
+/* PORTFOLIO DESTACADO */
+
+.portfolio-destacado {
+    .btn-secundario {
+        display: block;
+        width: fit-content;
+        margin: variables.$espaciado-grande auto 0;
+    }
+}

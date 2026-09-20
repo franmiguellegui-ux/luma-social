@@ -1,0 +1,15 @@
+/* FOOTER */
+
+@use "variables";
+
+footer {
+    padding: variables.$espaciado-grande;
+    background-color: variables.$color-negro;
+    color: variables.$color-blanco;
+    text-align: center;
+
+    p {
+        margin: 0;
+        font-size: variables.$texto-pequeno;
+    }
+}

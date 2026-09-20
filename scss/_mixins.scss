@@ -1,0 +1,24 @@
+/* MIXINS */
+
+@use "variables";
+
+@mixin flex-centro(
+    $direccion: row,
+    $gap: variables.$espaciado-medio
+) {
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin boton($fondo, $texto) {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: $fondo;
+    color: $texto;
+    text-decoration: none;
+    border-radius: variables.$radio-pequeno;
+    transition: 0.3s ease;
+}
