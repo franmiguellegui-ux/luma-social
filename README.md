@@ -77,3 +77,9 @@ proyecto-final/
 │   ├── imag/
 │   └── videos/
 └── README.md
+
+## Repositorio
+
+El código fuente del proyecto se encuentra disponible en GitHub:
+
+[Ver repositorio](https://github.com/franmiguellegui-ux/luma-social)
